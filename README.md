@@ -84,6 +84,7 @@ Use Matplotlib to visualize sample images and their corresponding labels.
 
 - **Input Shape**: `(256, 256, 3)`
 - **Output Shape**: `38 classes`
+- **Normalization**: Images are normalized using `Rescaling` to scale pixel values to the range `[0, 1]`.
 - **Loss Function**: `sparse_categorical_crossentropy`
 - **Optimizer**: `Adam`
 
