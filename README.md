@@ -1,4 +1,4 @@
-# Plant Disease Classification Model
+# Plant Disease Detection Model
 
 This project focuses on building a deep learning model to classify plant diseases using image data. The dataset is sourced from the `New Plant Diseases Dataset (Augmented)`.
 
@@ -24,12 +24,6 @@ Before running the model, please execute the following command to install the ne
 
 ```bash
 pip install -r requirements.txt
-```
-
-To create the `requirements.txt` file, you can use the command:
-
-```bash
-pip freeze > requirements.txt
 ```
 
 ## Dataset
