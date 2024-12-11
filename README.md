@@ -51,6 +51,7 @@ The code checks for missing or invalid image files and filters out hidden files.
 
    - The dataset is loaded using `image_dataset_from_directory`.
    - Images are resized to `(256, 256)` and normalized using `Rescaling`.
+   - Normalization is applied using the `Rescaling` layer in TensorFlow, which scales pixel values from the range `[0, 255]` to `[0, 1]`. This helps improve the stability and efficiency of the training process.
 
 2. **Model Architecture**:
 
@@ -94,6 +95,7 @@ Use Matplotlib to visualize sample images and their corresponding labels.
 - **Output Shape**: `38 classes`
 - **Loss Function**: `sparse_categorical_crossentropy`
 - **Optimizer**: `Adam`
+- **Normalization**: Pixel values are normalized to the range `[0, 1]` using the `Rescaling` layer to improve model training.
 
 ### Saving and Loading
 
