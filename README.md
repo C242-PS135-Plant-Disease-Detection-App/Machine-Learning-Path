@@ -1,4 +1,4 @@
-# Plant Disease Classification Model
+# Plant Disease Detection Model
 
 This project focuses on building a deep learning model to classify plant diseases using image data. The dataset is sourced from the `New Plant Diseases Dataset (Augmented)`.
 
