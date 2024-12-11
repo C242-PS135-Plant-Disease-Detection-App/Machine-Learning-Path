@@ -1,4 +1,4 @@
-# Plant Disease Detection Model
+# Plant Disease Classification Model
 
 This project focuses on building a deep learning model to classify plant diseases using image data. The dataset is sourced from the `New Plant Diseases Dataset (Augmented)`.
 
@@ -11,6 +11,7 @@ This project focuses on building a deep learning model to classify plant disease
 - [Usage](#usage)
 - [Model Details](#model-details)
 - [Saving and Loading](#saving-and-loading)
+- [Automated Dependency Installation](#automated-dependency-installation)
 - [Acknowledgements](#acknowledgements)
 
 ## Project Overview
@@ -19,19 +20,16 @@ The project trains a Convolutional Neural Network (CNN) model using TensorFlow a
 
 ## Requirements
 
-- Python 3.x
-- TensorFlow
-- NumPy
-- Pandas
-- Matplotlib
-- Ipywidgets
-- Open Datasets
-- Pickle
-
-Install the required packages using:
+Before running the model, please execute the following command to install the necessary dependencies:
 
 ```bash
-pip install tensorflow numpy pandas matplotlib ipywidgets opendatasets
+pip install -r requirements.txt
+```
+
+To create the `requirements.txt` file, you can use the command:
+
+```bash
+pip freeze > requirements.txt
 ```
 
 ## Dataset
@@ -50,8 +48,7 @@ The code checks for missing or invalid image files and filters out hidden files.
 1. **Data Loading and Preprocessing**:
 
    - The dataset is loaded using `image_dataset_from_directory`.
-   - Images are resized to `(256, 256)` and normalized using `Rescaling`.
-   - Normalization is applied using the `Rescaling` layer in TensorFlow, which scales pixel values from the range `[0, 255]` to `[0, 1]`. This helps improve the stability and efficiency of the training process.
+   - Images are resized to `(256, 256)` and normalized using `Rescaling`, which scales pixel values from the range `[0, 255]` to `[0, 1]`.
 
 2. **Model Architecture**:
 
@@ -95,7 +92,6 @@ Use Matplotlib to visualize sample images and their corresponding labels.
 - **Output Shape**: `38 classes`
 - **Loss Function**: `sparse_categorical_crossentropy`
 - **Optimizer**: `Adam`
-- **Normalization**: Pixel values are normalized to the range `[0, 1]` using the `Rescaling` layer to improve model training.
 
 ### Saving and Loading
 
